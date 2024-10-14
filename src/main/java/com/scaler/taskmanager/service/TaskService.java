@@ -47,7 +47,12 @@ public class TaskService {
     }
 
     public TaskEntity getTask(int id){
-        return tasks.stream().findAny().filter(task->task.getId()==id).orElse(null);
+        System.out.println(id);
+        return tasks.stream()
+                .filter(task -> task.getId() == id)
+                .findAny()
+                .orElse(null);
+
     }
 
 }
